@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body ~ h1 {
+    font-size: 2rem;
+    color: maroon;
+    background-color: #f08cc0;
+}
+
+nav {
+    color: rgb(211, 24, 155);
+    background-color:  rgba(245, 50, 235, 0.5);
+}
+
+#about {
+    background-image: linear-gradient(135deg,#d298e6, #f08cc0, #ccf);
+    /* background-image: radial-gradient(#d298e6, #f56fb4, #99ceff); */
+    background-size: cover; 
+    padding: 0.5em;
+}
+
+.home {
+    float: left;
+    margin: 0.2rem 1rem 0.5rem 0.2rem;
+}
+
+#mary {
+    border-radius: 7%;
+    float: left;
+    height: 150px;
+    margin: 1em;
+    /* position: absolute;
+    right: 35vw;
+    bottom: 2em; */
+}
+
+.about  {
+    margin-top: 0.7rem;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+h1 {
+    /* background-color: rgba(15, 1, 1, 0.582); */
+    background-color:rgba(0, 128, 0, 0.555);
+    margin:0 ;
+    text-align: center;
+    height: 10vh;
+    padding-top: 4vh;
+}
+
+#about h1 {
+    
+    padding-left: 1em;
+    background-color: inherit;
+}
+
+.home{
+    position: fixed;
+    left: 0.2em;
+    top: 0.5em;
+}
+
+#partners {
+    /* background-color: yellow; */
+    display: grid;
+    grid-template-areas:
+    "eco toys grocery"
+    "club unicef unicef"
+    "club . .";
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 0.7em;
+    margin: 2em;
+    width: 650px;
+    height: 350px;
+    position: absolute;
+    right: -4em;
+}
+
+#toys {
+    align-self: center; grid-area: toys;
+}
+
+#grocery {
+    grid-area: grocery;
+}
+
+#eco {
+    grid-area: eco;
+}
+
+#unicef {
+    grid-area: unicef;
+}
+
+#club {
+    grid-area: club;
+}
+
+#sponsors {
+    /* background-color: #f08cc0;
+    background-image: url(hands.jpg); */
+    background: #f08cc0 url(hands.jpg) no-repeat fixed top;
+    background-size: cover;
+}
+
+#sponsors div {
+    margin: 2em;
+    font: oblique lighter normal 1.2em/1.4 serif ;
+    width: 90%;
+    margin: 1em 1.2em;
+}
+
+span[id] {
+    font-size: 1.2em;
+    color: darkred;
+}
+
+#sponsors>h1 {
+    background-color: unset;
+}
+
+section~section {
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    padding: 1em;
+    background-color: rgba(17, 221, 17, 0.411);
+}
+
+footer>div {
+    flex-grow: 1;
+}
+
+.details {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+}
+
+ul {
+    list-style-type: none;
+    position: relative;
+    top:0.4em; 
+    /* bottom: 0.1em; */
+}
+
+h2 {
+    display: inline;
+    margin: 0.5em;
+}
+
+.bar {
+    background-color: rgba(15, 194, 15, 0.726);
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    float: left;
+    margin: 1em;
+    padding: 0.5em 1em;
+    border: solid;
+    border-radius: 10px;
+}
+
+a:link {
+    color: rgb(8, 75, 8);
+    text-decoration-line: none;
+}
+
+a:visited {
+    color: rgb(8, 75, 8);
+}
+
+a:hover {
+    font-size: 130%;
+}
+
+.bar:hover {
+    background-color:rgb(79, 236, 79);
+}
+
+.bar:active {
+    background-color: yellow;
+}
+
+#areas {
+    margin: 2.5em;
+    height: 50vh;
+    overflow-y: scroll;
+    /* background-image: url(pictures/flame-lilly-pale.jpg); */
+    background-color:rgb(79, 236, 79);
+    border-radius: 5px;
+    box-shadow: 0.5em 1em 1em black,
+                inset -2em -3em 2em green,
+                inset 2em 2em 2em green;
+    padding: 2em 1em 3em;
+    overflow-y: scroll;
+}
+
+#areas>* {
+    margin: 1em;
+}
+
+#areas p {
+    padding-bottom: 1.5em;
+}
+
+p {
+    clear: both;
+    margin: 1em 1.5em;
+}
+
+#first{
+    background: rgb(157, 233, 85) url(pictures/flame-lilly-pale.jpg);
+    background-size: cover;
+}
+
+header {
+    margin-left: 2em;
+}
+
+
+@media screen and (max-width:480px) {
+    #partners {
+        display:block;
+    }
+}
+
+@media (max-width:800px) {
+    #partners{
+        grid-template-areas: 
+        "eco toys "
+        "club grocery"
+        "unicef .";
+    }
+}
